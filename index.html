@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="app">
+        <div class="wrapper">
+            <div class="search-box">
+                <input type="search" class="input-search" placeholder="Name of the city">
+                <button><img src="img/search.png" alt=""></button>
+            </div>
+            <div class="error">
+                <p>Invalid City Name</p>
+            </div>
+            <div class="app">
+                <div class="temperature">
+                    <h1>20°C</h1>
+                    <img src="img/cloud.png" alt="">
+                </div>
+                    <h1 class="city-name">City</h1>
+                <div class="information">
+                    <div class="information-block">
+                        <p class="key">Feels like:</p>
+                        <p class="value feels">Value</p>
+                    </div>
+                    <div class="information-block">
+                        <p class="key">Wind:</p>
+                        <p class="value wind">Value</p>
+                    </div>
+                    <div class="information-block">
+                        <p class="key rain">Value</p>
+                    </div>
+                </div>
+                <div class="suggestion">
+                    <h1>Сlothing Advice</h1>
+                    <img id="help-img" src="img/help.png" alt="">
+                </div>
+                <div class="popup">
+                    <img id="popup-close" src="img/close.png" alt="">
+                    <p>Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                        Window content goes here. Window content goes here.
+                    </p>
+                    <div class="popup-img">
+                        <img id="popup-img-1" src="img/t-shirt.svg" alt="">
+                        <img id="popup-img-2" src="img/shorts.svg" alt=""> 
+                        <img id="popup-img-3" src="img/sandals.svg" alt="">
+                    </div> 
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>

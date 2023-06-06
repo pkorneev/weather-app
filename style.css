@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+:root{
+    --background: rgb(117, 207, 255);
+    --margin-top-big: 4rem;
+    --margin-top-small: 2rem;
+    --margin-basic: 1rem;
+    --font-color-1: white;
+}
+img{
+    user-select: none;
+}
+body{
+    background-color: var(--background);
+    background: url("img/back.jpeg") no-repeat;
+}
+#app{
+    padding: 4rem 1rem;
+}
+p{
+    font-size: 1.1rem;
+    color: var(--font-color-1);
+}
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.input-search {
+    height: 2rem;
+    padding: 0 .5rem;
+    border-radius: 1rem;
+    border: none;
+}
+.error{
+    margin-top: var(--margin-basic);
+    display: none;
+}
+.error p{
+    font-size: 1.5rem;
+}
+
+.app{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-box {
+    display: flex;
+    gap: .5rem;
+}
+.search-box button img{
+    width: 1rem;
+    margin-bottom: -5px;
+}
+.search-box button{
+    height: 2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    background-color: white;
+    padding: 0 .5rem;
+    transition: all .2s linear;
+}
+.search-box button:active{
+    opacity: .5;
+}
+.city-name{
+    font-size: 2.5rem;
+    margin-top: var(--margin-basic);
+    font-weight: 100;
+    color: var(--font-color-1);
+
+}
+.temperature{
+    margin-top: var(--margin-top-big);
+    display: flex;
+}
+.temperature h1{
+    font-size: 6rem;
+    font-weight: 200;
+    color: var(--font-color-1);
+}
+.temperature img{
+    width: 7rem;
+    margin-left: var(--margin-basic);
+}
+.information{
+   margin-top: var(--margin-top-big);
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+.information-block{
+    margin-top: var(--margin-basic);
+    width: 100%;
+    display: flex;
+    padding: 1rem 1rem;
+    background-color:rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    opacity: .6;
+}
+.information-block:first-child{
+    margin-top: 0;
+}
+.value{
+    margin-left: var(--margin-basic);
+}
+.suggestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.1);
+    margin-top: var(--margin-top-big);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+.suggestion h1{
+    color: var(--font-color-1);
+    font-weight: 100;
+    opacity: .6;
+}
+.suggestion img{
+    margin-top: var(--margin-basic);
+    width: 3rem;
+    filter: invert(100%) sepia(53%) saturate(2343%)
+     hue-rotate(53deg) brightness(98%) contrast(107%);
+     transition: all .2s linear;
+}
+.suggestion img:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
+.suggestion img:active{
+    opacity: .5;
+}
+.popup{
+    position: absolute;
+    max-width: 1200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    width: calc(100% - 2rem);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    display: none;
+}
+#popup-close{
+    width: 1.5rem;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all .2s linear;
+    filter: invert(100%) 
+    sepia(100%) saturate(0%) 
+    hue-rotate(305deg) brightness(103%)
+     contrast(103%);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+#popup-close:hover{
+    scale: 1.1;
+}
+#popup-close:active{
+    opacity: .5;
+}
+.popup-img{
+    display: flex;
+    margin-top: var(--margin-top-big);
+    justify-content: space-between;
+}
+.popup-img img{
+    width: 25%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(241deg)
+     brightness(103%) contrast(103%);
+     opacity: .7;
+}
+.popup p{
+    margin-top: var(--margin-basic);
+}
+@media screen and (min-width: 780px){
+    .information{
+        flex-direction: row;
+        gap: 4rem;
+    }
+    .information-block{
+        margin-top: 0;
+    }
+}
